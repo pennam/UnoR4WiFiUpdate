@@ -9,7 +9,7 @@ IF %ERRORLEVEL% NEQ 0 (
 )
 
 echo Start flashing firmware
-CALL \bin\windows\espflash write-bin -b 115200 0x0 firmware\S3.bin
+CALL bin\windows\espflash write-bin -b 115200 0x0 firmware\S3.bin
 
 @pause
 exit /b 0
