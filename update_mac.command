@@ -12,4 +12,5 @@ if [ "$?" -ne 0 ]; then
 fi
 
 echo "Start flashing firmware"
+sleep 1
 ./bin/mac/espflash write-bin -b 115200 0x0 firmware/S3.bin
