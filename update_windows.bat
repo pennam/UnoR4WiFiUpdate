@@ -9,6 +9,7 @@ IF %ERRORLEVEL% NEQ 0 (
 )
 
 echo Start flashing firmware
+timeout /t 5 /nobreak > NUL
 CALL bin\windows\espflash write-bin -b 115200 0x0 firmware\S3.bin
 
 @pause
