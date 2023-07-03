@@ -2,6 +2,9 @@
 SETLOCAL ENABLEDELAYEDEXPANSION
 setlocal
 
+REM go to the folder where this bat script is located
+cd /d %~dp0
+
 CALL bin\windows\unor4wifi-reboot
 
 IF %ERRORLEVEL% NEQ 0 (

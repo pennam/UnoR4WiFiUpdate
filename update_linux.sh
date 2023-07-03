@@ -1,6 +1,10 @@
 #!/bin/bash
 #set -e
 
+SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
+
+cd "$SCRIPTPATH"
+
 ./bin/linux/unor4wifi-reboot-linux64
 if [ "$?" -ne 0 ]; then
     echo "Cannot put the board in ESP mode. (via 'unor4wifi-reboot')"
