@@ -5,7 +5,7 @@ setlocal
 REM go to the folder where this bat script is located
 cd /d %~dp0
 
-CALL bin\windows\unor4wifi-reboot
+CALL bin\unor4wifi-reboot
 
 IF %ERRORLEVEL% NEQ 0 (
     GOTO ESPMODEERROR
@@ -13,7 +13,7 @@ IF %ERRORLEVEL% NEQ 0 (
 
 echo Start flashing firmware
 timeout /t 5 /nobreak > NUL
-CALL bin\windows\espflash write-bin -b 115200 0x0 firmware\S3.bin
+CALL bin\espflash write-bin -b 115200 0x0 firmware\UNOR4-WIFI-S3-0.2.0-rc1.bin
 
 @pause
 exit /b 0
