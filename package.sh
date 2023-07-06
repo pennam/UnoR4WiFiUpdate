@@ -12,7 +12,7 @@ function package_windows() {
     unzip /tmp/unor4wifi-reboot-windows.zip -d unor4wifi-update-windows/bin
 
     cp update_windows.bat unor4wifi-update-windows/update.bat
-    cp firmware/S3.bin unor4wifi-update-windows/firmware/UNOR4-WIFI-S3-0.2.0-rc1.bin
+    wget https://github.com/bcmi-labs/uno-r4-wifi-usb-bridge/releases/download/0.2.0/S3.bin -O unor4wifi-update-windows/firmware/UNOR4-WIFI-S3-0.2.0-rc1.bin
 
     zip -r unor4wifi-update-windows.zip unor4wifi-update-windows
 
@@ -30,7 +30,7 @@ function package_linux() {
     unzip /tmp/unor4wifi-reboot-linux64.zip -d unor4wifi-update-linux/bin
 
     cp update_linux.sh unor4wifi-update-linux/update.sh
-    cp firmware/S3.bin unor4wifi-update-linux/firmware/UNOR4-WIFI-S3-0.2.0-rc1.bin
+    wget https://github.com/bcmi-labs/uno-r4-wifi-usb-bridge/releases/download/0.2.0/S3.bin -O unor4wifi-update-linux/firmware/UNOR4-WIFI-S3-0.2.0-rc1.bin
 
     zip -r unor4wifi-update-linux.zip unor4wifi-update-linux
 
@@ -49,7 +49,7 @@ function package_macos() {
     unzip /tmp/unor4wifi-reboot-macos.zip -d unor4wifi-update-macos/bin
 
     cp update_mac.command unor4wifi-update-macos/update.command
-    cp firmware/S3.bin unor4wifi-update-macos/firmware/UNOR4-WIFI-S3-0.2.0-rc1.bin
+    wget https://github.com/bcmi-labs/uno-r4-wifi-usb-bridge/releases/download/0.2.0/S3.bin -O unor4wifi-update-macos/firmware/UNOR4-WIFI-S3-0.2.0-rc1.bin
 
     zip -r unor4wifi-update-macos.zip unor4wifi-update-macos
 
